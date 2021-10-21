@@ -4,6 +4,7 @@ pipeline {
     stage('Display wagwan') {
       steps {
         echo 'wagwan'
+        sleep 1
       }
     }
 
