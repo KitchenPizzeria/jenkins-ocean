@@ -5,6 +5,7 @@ pipeline {
       steps {
         echo 'wagwan'
         sleep 1
+        echo 'Ive just waited 1 minute'
       }
     }
 
