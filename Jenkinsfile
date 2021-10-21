@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('error') {
+    stage('Display wagwan') {
       steps {
         echo 'wagwan'
       }
