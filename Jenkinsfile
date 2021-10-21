@@ -8,8 +8,19 @@ pipeline {
     }
 
     stage('Display Python Version') {
-      steps {
-        sh 'python --version'
+      parallel {
+        stage('Display Python Version') {
+          steps {
+            sh 'python --version'
+          }
+        }
+
+        stage('Display node version') {
+          steps {
+            sh 'node version'
+          }
+        }
+
       }
     }
 
