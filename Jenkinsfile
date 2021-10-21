@@ -1,6 +1,7 @@
 pipeline {
   agent any
   stages {
+    
     stage('Display wagwan') {
       steps {
         echo 'wagwan'
@@ -11,6 +12,7 @@ pipeline {
 
     stage('Display Python Version') {
       parallel {
+        
         stage('Display Python Version') {
           steps {
             sh 'python --version'
@@ -22,9 +24,20 @@ pipeline {
             sh 'echo this is a stage'
           }
         }
-
-      }
+        
+      }  
     }
 
   }
+  
+  post {
+    success {
+      echo 'this will send a notification of success
+    }
+    
+    failure {
+      
+    }
+  }
+  
 }
