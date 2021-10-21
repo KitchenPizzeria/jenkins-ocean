@@ -17,7 +17,7 @@ pipeline {
 
         stage('Display node version') {
           steps {
-            sh 'node version'
+            sh 'node --version'
           }
         }
 
